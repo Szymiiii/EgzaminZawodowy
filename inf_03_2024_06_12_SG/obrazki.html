@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+     <header>
+        <h2>Efekty na obrazach</h2>
+     </header>
+     <section id="kontener">
+        <section id="blok1" class="blok">
+            <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" id="pszczola"><br>
+            <input type="radio" name="pszczola" id="blur">Blur <br>
+            <input type="radio" name="pszczola" id="sepia">Sepia <br>
+            <input type="radio" name="pszczola" id="negatyw">Negatyw <br>
+            <button onclick="blok1()" type="button">Zastosuj</button>
+        </section>
+        <section id="blok2" class="blok">
+            <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="pomarancza"><br>
+            <button onclick="blok2kol()" type="button">Kolorowy</button>
+            <button onclick="blok2czarbial()" type="button">Czarno-biały</button>
+        </section>
+        <section id="blok3" class="blok">
+            <img src="owoce.jpg" alt="Kosz pełen owoców" id="owoce"><br>
+            <input type="range" class="suwak" name="rowoce" id="rowoce" min="0" max="100" value="100"><br>
+            <button onclick="blok3()" type="button">Zastosuj</button>
+        </section>
+        <section id="blok4" class="blok">
+            <img src="zolw.jpg" alt="Żółw w wodzie" id="zolw"><br>
+            <input type="range" class="suwak" name="rzolw" id="rzolw" min="0" max="250"><br>
+            <button onclick="blok4()" type="button">Zastosuj</button>
+        </section>
+     </section>
+     <footer>
+        <p><a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu</a></p>
+        <p>Stronę wykonał: Szymon Hofman</p>
+     </footer>
+    <script>
+        var img1 = document.getElementById('pszczola')
+        var img2 = document.getElementById('pomarancza')
+        var img3 = document.getElementById('owoce')
+        var img4 = document.getElementById('zolw')
+        function getRandomInt(min, max) {
+            const minCeiled = Math.ceil(min);
+            const maxFloored = Math.floor(max);
+            return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+        }
+
+        function blok1() {
+            if (document.getElementById("blur").checked) {
+                img1.style.filter = "blur("+ getRandomInt(4, 8) +"px)"
+            }
+
+            if (document.getElementById("sepia").checked) {
+                img1.style.filter = "sepia(100%)"
+            }
+
+            if (document.getElementById("negatyw").checked) {
+                img1.style.filter = "invert(100%)"
+            }
+        }
+
+        function blok2kol() {
+            img2.style.filter = "grayscale(0)"
+        }
+
+        function blok2czarbial() {
+            img2.style.filter = "grayscale(100%)"
+        }
+
+        function blok3() {
+            var value3 = document.getElementById('rowoce').value
+            img3.style.filter = "opacity(" + value3 + "%)"
+        }
+
+        function blok4() {
+            var value3 = document.getElementById('rzolw').value
+            img4.style.filter = "brightness(" + value3 + "%)"
+        }
+    </script>
+
+</body>
+</html>

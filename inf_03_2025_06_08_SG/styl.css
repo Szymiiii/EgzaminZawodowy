@@ -1,0 +1,50 @@
+body,html,*{
+    text-align: center;
+    font-family: Georgia;
+}
+header,footer{
+    background-color: tomato;
+    color: mistyrose;
+    padding: 10px;
+}
+#blok{
+    display: flex;
+}
+nav{
+    width: 20%;
+}
+#sekcja2{
+    display: none;
+}
+#sekcja3{
+    display: none;
+}
+#blok1,#blok2,#blok3{
+    background-color: #FFAEA5;
+    height: 170px;
+    font-size: 200%;
+}
+#blok1{
+    background-color: mistyrose;
+}
+main{
+    background-color: mistyrose;
+    width: 80%;
+    height: 510px;
+    overflow: auto;
+}
+table{
+    margin: auto;
+    width: 60%;
+    border: dashed 1px indigo;
+}
+select,input{
+    margin: 20px;
+}
+dt{
+    font-style: italic;
+    font-weight: bold;
+}
+dt:hover{
+    font-size: 180%;
+}

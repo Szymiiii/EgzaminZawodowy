@@ -1,0 +1,41 @@
+*{
+    font-family: Century,Serif;
+    text-align: center;
+}
+header,footer{
+    background-color: Indigo;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+}
+#kontener{
+    display: flex;
+    flex-wrap: wrap;
+}
+.blok{
+    width: 50%;
+    height: 470px;
+}
+img{
+    padding: 3px;
+    margin: 10px;
+    border: dashed 2px slateblue;
+}
+a{
+    color: white;
+}
+button{
+    background-color: slateblue;
+    color: white;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+button:hover{
+    background-color: indigo;
+}
+input.suwak{
+    width: 80%;
+}

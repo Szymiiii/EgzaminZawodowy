@@ -1,0 +1,35 @@
+body,html,*{
+    font-family: Cambria;
+}
+body{
+    background-color: mistyrose;
+}
+header,footer{
+    height: 200px;
+    text-align: center;
+    overflow: hidden;
+}
+#glowny{
+    display: flex;
+    flex-wrap: wrap;
+}
+#s1,#s2,#s3,#s4{
+    background-color: plum;
+    height: 400px;
+    margin: 5px;
+    box-shadow: 4px 4px 10px dimgray;
+    overflow: hidden;
+    width: 22%;
+}
+@media only screen and (max-width: 800px) {
+    #s1, #s2, #s3, #s4 {
+        width: 100%;
+    }
+}
+h2{
+    text-align: center;
+}
+button:hover{
+    background-color: #505050;
+    color: white;
+}

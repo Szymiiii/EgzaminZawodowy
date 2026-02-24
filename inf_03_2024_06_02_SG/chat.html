@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <section id="blok">
+        <section id="lewy">
+            <header>
+                <h2>Chat</h2>
+            </header>
+            <section id="glowny">
+                <section id="chat">
+                    <section class="msgJ">
+                        <img src="Jolka.jpg" id="Jolka">
+                        <p>Cześć idziesz jutro do kina?</p>
+                    </section>
+                    <section class="msgK">
+                        <img src="Krzysiek.jpg" id="Krzysiek">
+                        <p>Tak! A ty?</p>
+                    </section>
+                </section>
+                <label for="text">Wypisz wiadomość: </label>
+                <input type="text" name="text" id="text">
+                <button onclick="wyslij()">Wyślij</button><br>
+                <button onclick="generuj()">Generuj losową odpowiedź</button>
+            </section>
+        </section>
+        <aside>
+            <h3>Chaty</h3>
+            <ul>
+                <li>Ogólny</li>
+                <li>Tematyczne</li>
+                <ol>
+                    <li>Turystyczny</li>
+                    <li>Żeglarski</li>
+                    <li>Filatelistyczny</li>
+                    <li>Hodowla zwierzątek domowych</li>
+                </ol>
+            </ul>
+            <h3>Uczestnicy</h3>
+            <p>Jolanta Nowak</p>
+            <img src="Jolka.jpg" alt="Jolanta Nowak">
+            <p>Krzysztof Łukasiński</p>
+            <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+        </aside>
+    </section>
+    <footer>
+        <h5>Chat wykonał: Szymon Hofman</h5>
+    </footer>
+    <script>
+        function wyslij() {
+            var wiadomosc = document.getElementById('text').value;
+            var text = '<img src="Jolka.jpg" id="Jolka"><p>'+ wiadomosc +'</p>'
+            console.log(text);
+        }
+        function generuj() {
+            lista = ["Świetnie!","Kto gra główną rolę?","Lubisz filmy Tego reżysera?","Będę 10 minut wcześniej","Może kupimy sobie popcorn?","Ja wolę Colę","Zaproszę jeszcze Grześka","Tydzień temu też byłem w kinie na Diunie","Ja funduję bilety"]
+            var rng = Math.floor(Math.random() * 9);
+            var odp = lista[rng]
+            console.log(odp);
+        }
+    </script>
+</body>
+</html>
