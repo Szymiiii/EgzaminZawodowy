@@ -1,0 +1,8 @@
+1.
+SELECT `Data`, `Temat` FROM `szkolenia` ORDER BY `szkolenia`.`Data` ASC
+2.
+SELECT szkolenia.`Data`, szkolenia.`Temat`, trenerzy.Nazwisko, trenerzy.Imie FROM `szkolenia` INNER JOIN trenerzy ON trenerzy.Id = szkolenia.Id_trenera;
+3.
+SELECT COUNT(szkolenia.Id_trenera), trenerzy.Nazwisko, trenerzy.Imie FROM `szkolenia` INNER JOIN trenerzy ON trenerzy.Id = szkolenia.Id_trenera GROUP BY trenerzy.Nazwisko;
+4.
+ALTER TABLE `zapisy` CHANGE `Id_klienta` `Id_sluchacza` INT(11) NULL DEFAULT NULL;
