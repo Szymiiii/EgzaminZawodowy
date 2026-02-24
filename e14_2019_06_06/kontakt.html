@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pogotowie komputerowe</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <section id="kontener">
+        <header>
+            <img src="animacja.gif">
+        </header>
+        <menu>
+            <a href="index.html">O nas</a>
+            <a href="kontakt.html">Kontakt</a>
+        </menu>
+        <main>
+            <section id="kol1" class="main">
+
+            </section>
+            <section id="kol2" class="main">
+                <h3>Formularz kontaktowy</h3>
+                <table>
+                    <form method="post">
+                        <tr>
+                            <td>Imię: </td>
+                            <td><input type="text" name="imie" id="imie"></td>
+                        </tr>
+                        <tr>
+                            <td>Nazwisko: </td>
+                            <td><input type="text" name="nazwisko" id="nazwisko"></td>
+                        </tr>
+                        <tr>
+                            <td>E-mail: </td>
+                            <td><input type="text" name="mail" id="mail"></td>
+                        </tr>
+                        <tr>
+                            <td>Usługa: </td>
+                            <td>
+                                <select name="select" id="select">
+                                    <option value="naprawa komputera">naprawa komputera</option>
+                                    <option value="odzyskiwanie danych">odzyskiwanie danych</option>
+                                    <option value="problemy z oprogramowaniem">problemy z oprogramowaniem</option>
+                                    <option value="konfiguracja sieci LAN">konfiguracja sieci LAN</option>
+                                    <option value="inne">inne</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="checkbox" name="kopia" id="kopia" checked>Wyślij kopię wiadomości</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="reset" id="reset" value="Resetuj"><button type="button" onclick="funckja()">Prześlij</button></td>
+                        </tr>
+                    </form>
+                </table>
+                <p id="wynik"></p>
+            </section>
+            <section id="kol3" class="main">
+
+            </section>
+        </main>
+        <footer>
+            <p>Autor strony: <b>Szymon Hofman</b></p>
+        </footer>
+    </section>
+    <script>
+        function funckja() {
+            var imie = document.getElementById('imie').value
+            var nazwisko = document.getElementById('nazwisko').value
+            var mail = document.getElementById('mail').value
+            var select = document.getElementById('select').value
+            var kopia = document.getElementById('kopia').checked
+            var email = mail.toLowerCase()
+            console.log(imie,nazwisko,email,select,kopia);
+
+            document.getElementById('wynik').innerHTML = imie + " " + nazwisko + "<br>" + email + "<br>" + "Usługa: " + select
+            
+            
+        }
+
+    </script>
+</body>
+</html>

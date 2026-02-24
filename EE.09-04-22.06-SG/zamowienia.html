@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienia hurtowe</title>
+    <link rel="stylesheet" href="styl4.css">
+</head>
+<body>
+    <header>
+        <h1>Sieci komputerowe</h1>
+    </header>
+    <section id="main">
+        <section id="lewy">
+            <h2>Aktualizacja i zamówienia materiałów</h2>
+            <p>Do wewnętrznego użytku firmy</p>
+            <img src="obraz.png" alt="sieć komputerowa">
+        </section>
+        <section id="prawy">
+            <table>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Jednostka</th>
+                    <th>Dostępna ilość</th>
+                    <th>Aktualizacja</th>
+                    <th>Zamówienie</th>
+                </tr>
+				<tr>
+					<td>Skrętka U/UTP drut</td>
+					<td>metr</td>
+					<td id="p1">20</td>
+					<td><button onclick="aktualizuj('p1')">Aktualizuj</button></td>
+					<td><button onclick="zamow('Skrętka U/UTP drut')">Zamów</button></td>
+				</tr>
+				<tr>
+					<td>Skrętka U/UTP linka</td>
+					<td>metr</td>
+					<td id="p2">2</td>
+					<td><button onclick="aktualizuj('p2')">Aktualizuj</button></td>
+					<td><button onclick="zamow('Skrętka U/UTP linka')">Zamów</button></td>
+				</tr>
+				<tr>
+					<td>Wtyki 8P8C</td>
+					<td>sztuki</td>
+					<td id="p3">10</td>
+					<td><button onclick="aktualizuj('p3')">Aktualizuj</button></td>
+					<td><button onclick="zamow('Wtyki 8P8C')">Zamów</button></td>
+				</tr>
+				<tr>
+					<td>Moduły Keystone</td>
+					<td>sztuki</td>
+					<td id="p4">30</td>
+					<td><button onclick="aktualizuj('p4')">Aktualizuj</button></td>
+					<td><button onclick="zamow('Moduły Keystone')">Zamów</button></td>
+				</tr>
+            </table>
+        </section>
+    </section>
+    <footer>
+        <a target="blank" href="http://sieci.pl/">Nasza strona internetowa</a>
+        <p>Stronę przygotował: Szymon Hofman</p>
+    </footer>
+    <script>
+        function sprawdz2() {
+            const produkty = ['p1', 'p2', 'p3', 'p4']
+            for (let i = 0; i < produkty.length; i++) {
+                let ilosc = document.getElementById(produkty[i]).innerHTML
+                let produkt = document.getElementById(produkty[i])
+                if (ilosc == 0) {
+                    produkt.style = 'background-color: red;'
+                }
+                if (ilosc >= 1 && ilosc <= 5) {
+                    produkt.style = 'background-color: yellow;'
+                }
+                if (ilosc > 5) {
+                    produkt.style = 'background-color: Honeydew;'
+                }
+            }
+        }
+
+        function aktualizuj(produktID) {
+            const produkt = document.getElementById(produktID)
+            const nowaIlosc = prompt('Podaj nową ilość:')
+            produkt.innerHTML = nowaIlosc
+            sprawdz2()
+        }
+
+        let idZamowienia = 0
+        function zamow(nazwaProduktu) {
+            alert('Zamówienie nr: ' + idZamowienia + ' Produkt: ' + nazwaProduktu)
+            idZamowienia++
+        }
+        sprawdz2()
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+1.
+SELECT `haslo` FROM `uzytkownicy` WHERE login = "Justyna";
+2.
+SELECT COUNT(id) FROM dane;
+3.
+SELECT uzytkownicy.login, dane.rok_urodz, dane.przyjaciol, dane.hobby, dane.zdjecie FROM `uzytkownicy` INNER JOIN dane ON uzytkownicy.id = dane.id;
+4.
+alter table dane ADD stanowisko varchar(50)

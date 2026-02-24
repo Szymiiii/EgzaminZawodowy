@@ -1,0 +1,32 @@
+body,html,*{
+    font-family: Garamond;
+    color: white;
+    text-align: center;
+}
+#blok{
+    display: flex;
+}
+header,footer{
+    background-color: forestgreen;
+    padding: 10px;
+}
+#lewy,#prawy{
+    background-color: forestgreen;
+    height: 490px;
+    width: 25%;
+    font-size: 30px;
+}
+#srodek{
+    background-color: chocolate;
+    height: 490px;
+    width: 50%;
+    font-size: 25px;
+}
+input{
+    color: green;
+}
+.main{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}

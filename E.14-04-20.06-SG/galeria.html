@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h1>Ozdoby – sklep</h1>
+    </header>
+    <section id="blok">
+        <section id="lewy">
+            <h2>OZDOBY</h2>
+            <a href="galeria.html">Galeria</a><br>
+            <a href="zamowienie.php">Zamówienie</a>
+        </section>
+        <section id="srodek">
+            <img onmouseover="choinka()" src="choinka.jpg" class="main" alt="ozdoby choinkowe">
+            <img onmouseover="mikolaj()" src="mikolaj.jpg" class="main" alt="ozdoby choinkowe">
+            <img onmouseover="renifer()" src="renifer.jpg" class="main" alt="ozdoby choinkowe">
+            <p>Wybierz ozdobę w kółku</p>
+            <p id="output"></p>
+        </section>
+        <section id="prawy">
+            <img src="animacja.gif">
+        </section>
+    </section>
+    <footer>
+        <h3>Autor strony: Szymon Hofman</h3>
+    </footer>
+    <script>
+
+        var paragraf = document.getElementById('output')
+
+        function choinka() {
+            paragraf.innerHTML = "Wybrałeś choinkę. Cena 10 zł"
+        }
+        function mikolaj() {
+            paragraf.innerHTML = "Wybrałeś mikołaja. Cena 12 zł"
+        }
+        function renifer() {
+            paragraf.innerHTML = "Wybrałeś renifera. Cena 8 zł"
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+body,html,*{
+    font-family: Garamond;
+}
+header{
+    background-color: saddlebrown;
+    color: white;
+    text-align: center;
+    height: 50px;
+}
+#glowny{
+    display: flex;
+}
+#lewy{
+    background-color: tan;
+    height: 500px;
+    width: 40%;
+}
+#prawy{
+    height: 500px;
+    background-color: tan;
+    width: 60%;
+}
+#Lprawy{
+    height: 250px;
+}
+#Pprawy{
+    height: 250px;
+
+}
+footer{
+    background-color: saddlebrown;
+    color: white;
+}
+form{
+    background-color: saddlebrown;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 300px;
+}
+input{
+    margin: 5px;
+}
+p::before{
+    content: "STATUS: ";
+}

@@ -1,0 +1,47 @@
+body,html{
+    background-color: #99FFCC;
+}
+#kontener{
+    width: 1000px;
+    margin: auto;
+}
+header{
+    background-color: #99FF66;
+    height: 200px;
+}
+menu{
+    background-color: #66CCFF;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+main{
+    display: flex;
+}
+.main{
+    width: 310px;
+    padding: 10px;
+}
+footer{
+    background-color: #66CCFF;
+    color: #006666;
+    text-align: right;
+    height: 30px;
+    padding: 20px;
+}
+menu > a{
+    color: #006666;
+    margin: 50px;
+    font-size: 200%;
+    text-decoration: none;
+}
+h2,h3{
+    text-align: center;
+}
+input#reset{
+    background-color: #FF0000;
+}
+button{
+    background-color: #00FF00;
+}

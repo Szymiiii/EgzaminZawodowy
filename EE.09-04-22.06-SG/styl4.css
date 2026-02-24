@@ -1,0 +1,49 @@
+html,*,body{
+    font-family: Verdana;
+    text-align: center;
+}
+header{
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+#main{
+    display: flex;
+}
+#lewy{
+    background-color: palegreen;
+    padding: 3px;
+}
+#prawy{
+    background-color: honeydew;
+    width: 70%;
+    height: 500px;
+    padding-top: 100px;
+}
+footer{
+    background-color: palegreen;
+    padding: 3px;
+}
+table,td,td{
+    border-collapse: collapse;
+    border: 1px solid darkgreen;
+}
+table{
+    margin: auto;
+    width: 95%;
+}
+td,th{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+}
+button{
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+button:hover{
+    background-color: honeydew;
+    color: darkgreen;
+}
