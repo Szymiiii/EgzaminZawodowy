@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szkoła ponadgimnazjalna</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h1>Projekt strony internetowej szkoły ponadgimnazjalnej</h1>
+    </header>
+    <section id="main">
+        <section id="lewy">
+            <table>
+                <tr>
+                    <th>Treść zapytania</th>
+                    <th width="405px">Zrzut ekranu</th>
+                </tr>
+                <tr>
+                    <td>INSERT INTO `klasa`(`id`, `nazwa`) VALUES ('5','3a');</td>
+                    <td><img src="kwerenda1.jpg" alt="kwerenda1.jpg"></td>
+                </tr>
+                <tr>
+                    <td>SELECT klasa.nazwa, AVG(uczen.Srednia_ocen) FROM `klasa` INNER JOIN uczen ON klasa.id = uczen.id_klasy GROUP BY klasa.nazwa;</td>
+                    <td><img src="kwerenda2.jpg" alt="kwerenda2.jpg"></td>
+                </tr>
+                <tr>
+                    <td>CREATE USER `Dyrektor`@`localhost` IDENTIFIED BY 'dyr_123';</td>
+                    <td><img src="nowy_uzytkownik.jpg" alt="nowy_uzytkownik.jpg"></td>
+                </tr>
+                <tr>
+                    <td>GRANT all PRIVILEGES ON szkola.* to `Dyrektor`@`localhost`;</td>
+                    <td><img src="uprawniena.jpg" alt="uprawniena.jpg"></td>
+                </tr>
+            </table>
+        </section>
+        <section id="prawy">
+            <h2>Do pobrania</h2>
+                <ul>
+                    tu nie dziala
+                    <li><a href="A:\XAMP\htdocs\zad\zad7\zapytania.txt">zapytania SQL</a></li>
+                    <li><a href="A:\XAMP\htdocs\zad\zad7\szkola_nowa.sql">baza danych</a></li>
+                </ul>
+                <hr>
+                <h3>Wyznaczanie najniższej średniej</h3>
+                <ul>
+                    tu nie dziala
+                    <li>Polak<input id="1" type="text"></li>
+                    <li>Nowak<input id="2" type="text"></li>
+                    <li>Rysik<input id="3" type="text"></li>
+                    <button onclick="wyznacz()">Wyznacz</button>
+                    <h3>Najniższa średnia:</h3>
+                    <p id="wynik"></p>
+                </ul>
+        </section>
+    </section>
+    <footer>
+        <h3>stronę wykonał: Szymon Hofman</h3>
+    </footer>
+<script>
+function wyznacz() {
+    const srednia1 = document.getElementById("1").value.trim();
+    const srednia2 = document.getElementById("2").value.trim();
+    const srednia3 = document.getElementById("3").value.trim();
+
+    if (srednia1 === "" || srednia2 === "" || srednia3 === "") {
+        alert("wpisz poprawne dane");
+        return;
+    }
+
+    const a = Number(srednia1);
+    const b = Number(srednia2);
+    const c = Number(srednia3);
+
+    if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        alert("wpisz poprawne dane");
+        return;
+    }
+    
+    document.getElementById("wynik").innerHTML = Math.min(a, b, c);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+1.
+SELECT `kod`, `nazwa`, `cena` FROM `kursy` ORDER BY cena ASC;
+2.
+SELECT `nazwa`  FROM `kursy`;
+3.
+INSERT INTO `uczestnicy`(`imie`, `nazwisko`, `wiek`) VALUES(`Tadeusz`, `Wysocki`,`36`);
+4.
+SELECT nazwa, COUNT(DISTINCT id_uczestnika) AS "Zapisanych" FROM kursy INNER JOIN kursy_uczestnicy ON kod = kod_kursu GROUP BY nazwa;

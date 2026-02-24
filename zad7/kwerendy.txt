@@ -1,0 +1,8 @@
+1.
+INSERT INTO `klasa`(`id`, `nazwa`) VALUES ('5','3a');
+2.
+SELECT klasa.nazwa, AVG(uczen.Srednia_ocen) FROM `klasa` INNER JOIN uczen ON klasa.id = uczen.id_klasy GROUP BY klasa.nazwa;
+3.
+CREATE USER `Dyrektor`@`localhost` IDENTIFIED BY 'dyr_123';
+4.
+GRANT all PRIVILEGES ON szkola.* to `Dyrektor`@`localhost`;

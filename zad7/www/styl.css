@@ -1,0 +1,46 @@
+body,html,*{
+    font-family: Arial;
+    color: white;
+}
+a{
+    color: yellow;
+}
+#main{
+    display: flex;
+}
+header,footer{
+    background-color: #5957a1;
+    text-align: center;
+}
+#lewy{
+    background-color: #bbadcd;
+    width: 65%;
+    overflow: scroll;
+}
+#prawy{
+    background-color: #5957a1;
+    text-align: center;
+    width: 35%
+}
+header{
+    padding: 10px;
+    height: 70px;
+}
+#lewy,#prawy{
+    height: 450px;
+}
+footer{
+    height: 50px;
+}
+hr{
+    border: 1px solid yellow;
+}
+ol{
+    list-style: square;
+}
+td,th{
+    border: dashed 1px black;
+}
+h3,h1{    
+    margin: 0px;
+}
